@@ -1,0 +1,13 @@
+TgCrypto
+git+https://github.com/pyrogram/pyrogram@master
+py-tgcalls==0.8.1rc1
+requests
+aiohttp
+aiofiles
+asyncio
+wget
+youtube-search-python==1.4.6
+youtube-search-python
+yt-dlp
+python-dotenv
+googletrans==4.0.0rc1
