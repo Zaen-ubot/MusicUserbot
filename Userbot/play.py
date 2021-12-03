@@ -17,18 +17,18 @@ from config import HNDLR, bot, call_py
 from Userbot.helpers.queues import QUEUE, add_to_queue, get_queue
 
 AMBILFOTO = [
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
-    "https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
+    "https://telegra.ph/file/9956c396644dd15db214c.jpg",
 ]
 
 IMAGE_THUMBNAIL = random.choice(AMBILFOTO)
@@ -126,7 +126,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/ab86a59ee1ff03ea78df3.jpg",
+                    photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
                     caption=f"""
 **✧ Lagu Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({link})
@@ -146,7 +146,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
+                    photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
                     caption=f"""
 **✧ Mulai Memutar Lagu
 ✧ Judul: [{songname}]({link})
@@ -245,7 +245,7 @@ async def videoplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
+                    photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
                     caption=f"""
 **✧ Video Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({link})
@@ -269,7 +269,7 @@ async def videoplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
+                    photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
                     caption=f"""
 **✧ Mulai Memutar Video
 ✧ Judul: [{songname}]({link})
@@ -374,7 +374,7 @@ async def playfrom(client, m: Message):
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     # await m.reply_to_message.delete()
                     await m.reply_photo(
-                        photo="https://telegra.ph/file/33bba9478a6d953a0294f.jpg",
+                        photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
                         caption=f"""
 **✧ Mulai Memutar Lagu Dari {chat}
 ✧ Judul: [{songname}]({link})
