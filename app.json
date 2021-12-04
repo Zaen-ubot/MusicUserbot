@@ -6,7 +6,7 @@
         "MusicPlayer",
         "VideoPlayer"
     ],
-    "repository": "https://github.com/FeriEXP/Userbot-Music",
+    "repository": "https://github.com/Zaen-ubot/ZaenMusic",
     "env": {
         "SESSION": {
             "description": "Pyrogram String Session",
