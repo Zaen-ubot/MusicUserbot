@@ -1,6 +1,7 @@
 {
     "name": " Music And Video Player",
     "description": "UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.",
+    "logo": "https://telegra.ph/file/4219866eba63bcac65527.jpg",
     "keywords": [
         "Telegram",
         "MusicPlayer",
