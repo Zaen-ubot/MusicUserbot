@@ -17,18 +17,18 @@ from config import HNDLR, bot, call_py
 from Userbot.helpers.queues import QUEUE, add_to_queue, get_queue
 
 AMBILFOTO = [
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
-    "https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
+    "https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
 ]
 
 IMAGE_THUMBNAIL = random.choice(AMBILFOTO)
@@ -126,12 +126,12 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/9956c396644dd15db214c.jpg",
+                    photo="https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
                     caption=f"""
 **👉 Antrian Lagu {pos}
 🐵 Judul Lagu: [{songname}]({link})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🎧 Request By: {m.from_user.mention}**
 """,
                 )
             else:
@@ -146,12 +146,12 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
+                    photo="https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
                     caption=f"""
-**🚬 Sedang Memutar Lagu
-🐵 Judul Lagu: [{songname}]({link})
+**🎧 Sedang Memutar Lagu
+🎵 Judul Lagu: [{songname}]({link})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                 )
 
@@ -160,7 +160,7 @@ async def play(client, m: Message):
             await m.reply("Balas ke File Audio atau berikan sesuatu untuk Pencarian")
         else:
             await m.delete()
-            huehue = await m.reply("**😁 Sedang Mencari Lagu... **")
+            huehue = await m.reply("**⚡ Sedang Mencari Lagu... **")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -179,10 +179,10 @@ async def play(client, m: Message):
                         await m.reply_photo(
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
-**👉 Antrian Lagu {pos}
-🐵 Judul Lagu: [{songname}]({url})
+**🎧 Antrian Lagu {pos}
+🎵 Judul Lagu: [{songname}]({url})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                         )
                     else:
@@ -200,10 +200,10 @@ async def play(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{IMAGE_THUMBNAIL}",
                                 caption=f"""
-**👉 Sedang Memutar Lagu
-🐵 Judul Lagu: [{songname}]({url})
+**🎧 Sedang Memutar Lagu
+🎵 Judul Lagu: [{songname}]({url})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
@@ -269,12 +269,12 @@ async def videoplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
+                    photo="https://telegra.ph/file/edcd6eed82063060d5f3f.jpg",
                     caption=f"""
 **🎬 Mulai Memutar Video
-🐵 Judul: [{songname}]({link})
+▶️ Judul: [{songname}]({link})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                 )
 
@@ -308,10 +308,10 @@ async def videoplay(client, m: Message):
                         await m.reply_photo(
                             photo=f"{IMAGE_THUMBNAIL}",
                             caption=f"""
-**🎬 Video Ngantri Ke {pos}
-🐵 Judul: [{songname}]({url})
+**🙅 Antrian Video {pos}
+▶️ Judul: [{songname}]({url})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                         )
                     else:
@@ -376,10 +376,10 @@ async def playfrom(client, m: Message):
                     await m.reply_photo(
                         photo="https://telegra.ph/file/ce5d9356d170dbacf5c8f.jpg",
                         caption=f"""
-**👉 Mulai Memutar Lagu Dari {chat}
-🐵 Judul Lagu: [{songname}]({link})
+**🎶 Mulai Memutar Lagu {chat}
+🎵 Judul Lagu: [{songname}]({link})
 📌 Groups ID: {chat_id}
-😁 Request By: {m.from_user.mention}**
+🙇 Request By: {m.from_user.mention}**
 """,
                     )
             await hmm.delete()
@@ -398,7 +398,7 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**✧ SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**⚡ SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
@@ -411,4 +411,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**✧ Tidak Memutar Apapun...**")
+        await m.reply("**⚡ Tidak Memutar Apapun...**")
