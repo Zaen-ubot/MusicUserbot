@@ -38,7 +38,7 @@ async def ping(client, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m_reply.edit(
-        f"<b>🏓 PONG</b> `{delta_ping * 1000:.3f} ms` \n<b>⏳ AKTIF</b> - `{uptime}`"
+        f"<b>🙈 Ciluk</b> `{delta_ping * 1000:.3f} ms` \n<b>🙉 Baaa</b> - `{uptime}`"
     )
 
 
@@ -56,7 +56,7 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ Userbot Di Restart Ulang**")
+    await loli.edit("**✅ Asisten Rafen memulai restart.**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
@@ -67,24 +67,24 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 Hallo {m.from_user.mention}!
 
-🛠 MENU BANTUAN MUSIC PLAYER
+🛠 MENU BANTUAN Asisten Rafen 
 
-⚡ PERINTAH UNTUK SEMUA ORANG
-• {HNDLR}play [judul lagu | link youtube | balas file audio] - untuk memutar lagu
-• {HNDLR}videoplay [judul video | link youtube | balas file video] - untuk memutar video
-• {HNDLR}playlist untuk melihat daftar putar
-• {HNDLR}ping - untuk cek status
-• {HNDLR}id - untuk melihat id pengguna
-• {HNDLR}video - judul video | link yt untuk mencari video
-• {HNDLR}song - judul lagu | link yt untuk mencari lagu
-• {HNDLR}help - untuk melihat daftar perintah
+⚡ PERINTAH UNTUK SEMUA ORANG KECUALI ORANG MENINGGAL
+• {HNDLR}Play🎵 [judul lagu | link youtube | balas file audio] - untuk memutar lagu
+• {HNDLR}Videoplay📺 [judul video | link youtube | balas file video] - untuk memutar video
+• {HNDLR}Playlist🔖 untuk melihat daftar putar
+• {HNDLR}Ping🏓 - untuk cek status
+• {HNDLR}Id🐵 - untuk melihat id pengguna
+• {HNDLR}Video🎬 - judul video | link yt untuk mencari video
+• {HNDLR}Song📜 - judul lagu | link yt untuk mencari lagu
+• {HNDLR}Help🐣 - untuk melihat daftar perintah
 
 
 ⚡ PERINTAH UNTUK SEMUA ADMIN
-• {HNDLR}resume - untuk melanjutkan pemutaran lagu atau video
-• {HNDLR}pause - untuk untuk menjeda pemutaran lagu atau video
-• {HNDLR}skip - untuk melewati lagu atau video
-• {HNDLR}end - untuk mengakhiri pemutaran</b>
+• {HNDLR}resume 🐵- untuk melanjutkan pemutaran lagu atau video
+• {HNDLR}pause 🐵- untuk untuk menjeda pemutaran lagu atau video
+• {HNDLR}skip 🐵- untuk melewati lagu atau video
+• {HNDLR}end 🐵- untuk mengakhiri pemutaran</b>
 """
     await m.reply(HELP)
 
@@ -93,28 +93,16 @@ async def help(client, m: Message):
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
-<b>👋 Hallo {m.from_user.mention}!
+<b>🙈 Ciluk Baaa 🙊 {m.from_user.mention}!
 
 🗃️ Music Dan Video Player UserBot
 
 🔰 Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.
 
 👩‍💻 Dipersembahkan Oleh 
-• [Zaen](https://t.me/Mafia_TobaTZ)
+• [ ](https://t.me/Rafens)
 
-📝 Persyaratan
-• Python 3.8+
-• FFMPEG
-• Nodejs v16+
 
-[Repo Zaen-Music](https://github.com/Zaen-ubot/ZaenMusic)
-
-📝 Variabel Yang Dibutuhkan
-• `API_ID` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `API_HASH` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `SESSION` - Sesi String Pyrogram.
-• `SUDO_USER` - ID Akun Telegram Yang Digunakan Sebagai Admin
-• `HNDLR` - Handler untuk menjalankan userbot mu
-
+[Source](https://github.com/risswazowlsky/ZaenMusic)
 """
     await m.reply(REPO, disable_web_page_preview=True)

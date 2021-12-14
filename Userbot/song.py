@@ -62,8 +62,8 @@ async def song(client, message: Message):
         return
     c_time = time.time()
     capy = f"""
-**❤️‍🔥 Nama Lagu:** [{thum}]({mo})
-**🗃️ Permintaan Dari:** {message.from_user.mention}
+**🎵 Judul Lagu:** [{thum}]({mo})
+**🐵 Request:** {message.from_user.mention}
 """
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
@@ -78,7 +78,7 @@ async def song(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**Sedang Mendownload Lagu 📥** `{urlissed}`",
+            f"**Lagi download sabar anjing😁** `{urlissed}`",
             file_stark,
         ),
     )
@@ -232,10 +232,10 @@ def time_to_seconds(time):
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
-    pablo = await client.send_message(message.chat.id, f"**🔎 Mencari** `{urlissed}`")
+    pablo = await client.send_message(message.chat.id, f"**🖕 Sabar lagi cari lagu** `{urlissed}`")
     if not urlissed:
         await pablo.edit(
-            "Sintaks Perintah Tidak Valid, Silakan Periksa Menu Bantuan Untuk Tahu Lebih Banyak!"
+            "🙈JUDUL NYA GOBLOG, CARI LAGU YG LAIN!🙉"
         )
         return
 
@@ -266,13 +266,13 @@ async def vsong(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(url, download=True)
     except Exception as e:
-        await event.edit(event, f"**Gagal Mengunduh** \n**Kesalahan :** `{str(e)}`")
+        await event.edit(event, f"**🥴YAHAHA GAGAL** \n**Kesalahan :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
     capy = f"""
-**🗃️ Nama Video:** [{thum}]({mo})
-**🦹🏻 Permintaan Dari:** {message.from_user.mention}
+**🎬 Judul Video:** [{thum}]({mo})
+**🐵 Request:** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
@@ -286,7 +286,7 @@ async def vsong(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**Sedang Mendownload Video 📥** `{urlissed}`",
+            f"**SABAR YA KONTOL AWAS AJA GAMAU SABAR😁** `{urlissed}`",
             file_stark,
         ),
     )

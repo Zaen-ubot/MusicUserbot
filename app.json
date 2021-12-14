@@ -7,7 +7,7 @@
         "MusicPlayer",
         "VideoPlayer"
     ],
-    "repository": "https://github.com/Zaen-ubot/ZaenMusic",
+    "repository": "https://github.com/risswazowlsky/ZaenMusic/",
     "env": {
         "SESSION": {
             "description": "Pyrogram String Session",
