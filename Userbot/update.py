@@ -42,8 +42,6 @@ def updater():
     changelog, tl_chnglog = gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     return bool(changelog)
 
-
-@Client.on_message(command(["update", f"update@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
