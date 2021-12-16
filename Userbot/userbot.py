@@ -78,7 +78,7 @@ async def help(client, m: Message):
 • {HNDLR}video - judul video | link yt untuk mencari video
 • {HNDLR}song - judul lagu | link yt untuk mencari lagu
 • {HNDLR}help - untuk melihat daftar perintah
-
+• {HNDLR}join- untuk join | ke grup 
 
 ⚡ PERINTAH UNTUK SEMUA ADMIN
 • {HNDLR}resume - untuk melanjutkan pemutaran lagu atau video
