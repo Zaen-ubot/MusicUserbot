@@ -42,7 +42,6 @@ def updater():
     changelog, tl_chnglog = gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     return bool(changelog)
 
-@sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
     msg = await message.reply("🔄 `processing update...`")
