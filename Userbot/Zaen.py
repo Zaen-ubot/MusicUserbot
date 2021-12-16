@@ -19,7 +19,7 @@ async def join(client, message):
         await USER.join_chat(link)
         await message.reply("**Userbot Joined**")
     except UserAlreadyParticipant:
-        await message.reply("**Userbot Already Participant**")
+        await message.reply("**Userbot Udah join Disini**")
 
 
 @Client.on_message(filters.command(["opengc"], prefixes=f"{HNDLR}"))
