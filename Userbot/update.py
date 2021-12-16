@@ -5,16 +5,6 @@ import asyncio
 import subprocess
 from asyncio import sleep
 
-from git import Repo
-from pyrogram.types import Message
-from driver.filters import command
-from pyrogram import Client, filters
-from os import system, execle, environ
-from driver.decorators import sudo_users_only
-from git.exc import InvalidGitRepositoryError
-from config import UPSTREAM_REPO, BOT_USERNAME
-
-
 def gen_chlog(repo, diff):
     upstream_repo_url = Repo().remotes[0].config_reader.get("url").replace(".git", "")
     ac_br = repo.active_branch.name
