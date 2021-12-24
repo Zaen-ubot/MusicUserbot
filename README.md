@@ -32,4 +32,4 @@
 | `/skip` | switch to next stream (admin only) |
 | `/stop` | end the streaming (admin only) |
 | `/playlist` | show you all the current stream list |
-| `/song | (query)` | download music from youtube
+| /song | (query)` | download music from youtube
