@@ -24,12 +24,12 @@
 ## 🛠 Commands:
 | Command | Description |
 | ------ | ------ |
-| `+play` |(query) | play music from youtube |
-| `+vplay` |(query) | play video from youtube |
-| `+vplay` |(live link) | play video live streaming video |
+| `+play` | play music from youtube |
+| `+vplay` | play video from youtube |
+| `+vplay` | play video live streaming video |
 | `+pause` | pause the streaming (admin only) |
 | `+resume` | resume the streaming (admin only) |
 | `+skip` | switch to next stream (admin only) |
-| `+stop` | end the streaming (admin only) |
 | `+playlist` | show you all the current stream list |
-| `+song` | (query) | download music from youtube
+| `+song` | download music from youtube |
+| `+stop` | end the streaming (admin only) |
