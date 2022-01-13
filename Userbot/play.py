@@ -133,7 +133,11 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Permintaan: {m.from_user.mention}**
 """,
-                )
+ [
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],               )
             else:
                 await call_py.join_group_call(
                     chat_id,
@@ -184,7 +188,11 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                        )
+[
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                        )
                     else:
                         try:
                             await call_py.join_group_call(
@@ -205,7 +213,11 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                            )
+ [
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                           )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
@@ -252,7 +264,11 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                )
+[
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                )
             else:
                 if Q == 720:
                     hmmm = HighQualityVideo()
@@ -276,7 +292,11 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas permintaan: {m.from_user.mention}**
 """,
-                )
+[
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                )
 
     else:
         if len(m.command) < 2:
@@ -313,7 +333,11 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                        )
+ [
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                       )
                     else:
                         try:
                             await call_py.join_group_call(
@@ -332,7 +356,11 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                            )
+ [
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                           )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
@@ -381,7 +409,11 @@ async def playfrom(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                    )
+ [
+                InlineKeyboardButton(text="1️⃣", callback_data=f'Music {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="2️⃣", callback_data=f'Music {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="3️⃣", callback_data=f'Music {ID3}|{duration3}|{user_id}')
+            ],                   )
             await hmm.delete()
             await m.reply(
                 f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
