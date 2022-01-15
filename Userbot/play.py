@@ -133,8 +133,8 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Permintaan: {m.from_user.mention}**
 """,
-          
-             else:
+                )
+            else:
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
@@ -153,7 +153,7 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                
+                )
 
     else:
         if len(m.command) < 2:
@@ -184,6 +184,7 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                        )
                     else:
                         try:
                             await call_py.join_group_call(
@@ -204,6 +205,7 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                            )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
@@ -250,6 +252,7 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                )
             else:
                 if Q == 720:
                     hmmm = HighQualityVideo()
@@ -273,6 +276,7 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas permintaan: {m.from_user.mention}**
 """,
+                )
 
     else:
         if len(m.command) < 2:
@@ -309,6 +313,7 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                        )
                     else:
                         try:
                             await call_py.join_group_call(
@@ -327,6 +332,7 @@ async def videoplay(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                            )
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
@@ -375,6 +381,7 @@ async def playfrom(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
+                    )
             await hmm.delete()
             await m.reply(
                 f"âž• Menambahkan {lmt} Lagu Ke Dalam Antrian\nâ€¢ Klik {HNDLR}playlist Untuk Melihat Daftar Putar**"
@@ -404,4 +411,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**✧ Tidak Memutar Apapun....**")
+        await m.reply("**✧ Tidak Memutar Apapun...**")
