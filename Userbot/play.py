@@ -152,7 +152,7 @@ async def play(client, m: Message):
 ✧ Chat ID: {chat_id}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
-                )
+                
 
     else:
         if len(m.command) < 2:
