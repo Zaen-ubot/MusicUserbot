@@ -131,7 +131,6 @@ async def play(client, m: Message):
 **✧ Lagu Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({link})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Permintaan: {m.from_user.mention}**
 """,
                 )
@@ -152,7 +151,6 @@ async def play(client, m: Message):
 **✧ Mulai Memutar Lagu
 ✧ Judul: [{songname}]({link})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                 )
@@ -184,7 +182,6 @@ async def play(client, m: Message):
 **✧ Lagu Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({url})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                         )
@@ -206,7 +203,6 @@ async def play(client, m: Message):
 **✧ Mulai Memutar Lagu
 ✧ Judul: [{songname}]({url})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                             )
@@ -254,7 +250,6 @@ async def videoplay(client, m: Message):
 **✧ Video Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({link})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                 )
@@ -279,7 +274,6 @@ async def videoplay(client, m: Message):
 **✧ Mulai Memutar Video
 ✧ Judul: [{songname}]({link})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas permintaan: {m.from_user.mention}**
 """,
                 )
@@ -317,7 +311,6 @@ async def videoplay(client, m: Message):
 **✧ Video Di Antrian Ke {pos}
 ✧ Judul: [{songname}]({url})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                         )
@@ -337,7 +330,6 @@ async def videoplay(client, m: Message):
 **✧ Mulai Memutar Video
 ✧ Judul: [{songname}]({url})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                             )
@@ -387,7 +379,6 @@ async def playfrom(client, m: Message):
 **✧ Mulai Memutar Lagu Dari {chat}
 ✧ Judul: [{songname}]({link})
 ✧ Chat ID: {chat_id}
-✧ duration:{duration}
 ✧ Atas Permintaan: {m.from_user.mention}**
 """,
                     )
