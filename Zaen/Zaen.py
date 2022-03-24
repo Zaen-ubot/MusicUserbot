@@ -53,7 +53,7 @@ async def joinvc(client, filters):
         "note": "make sure voice chat is active",
     },
 
-async def start(_, message: Message):
+async def start(client, filters):
     group_call = getchat
     await group_call.start(message.chat.id)
 
