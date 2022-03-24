@@ -22,7 +22,7 @@ async def join(client, message):
         await message.reply("**Userbot Udah join Disini**")
 
 
-@Client.on_message(filters.command(["opengc"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["openvcs"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def opengc(client, message):
     flags = " ".join(message.command[1:])
