@@ -4,7 +4,8 @@ from config import HNDLR, bot as USER
 from Zaen.helpers.decorators import authorized_users_only
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.raw.functions.phone import CreateGroupCall
-from pytgcalls import GroupCallFactory
+from pyrogram import GroupCallFactory
+from pyrogram import GroupCall
 
 @Client.on_message(filters.command(["join"], prefixes=f"{HNDLR}"))
 @authorized_users_only
