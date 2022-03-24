@@ -45,7 +45,8 @@ async def opengc(client, message):
         )
 
 @Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
-   async def joinvc(client, message):
+authorized_users_only
+ async def joinvc(client, filters):
     info={
         "header": "join voice chat group.",
         "description": "To join voice chat group.",
