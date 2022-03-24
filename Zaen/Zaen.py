@@ -4,7 +4,8 @@ from config import HNDLR, bot as USER
 from Zaen.helpers.decorators import authorized_users_only
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.raw.functions.phone import CreateGroupCall
-
+from pytgcalls import GroupCall
+from pytgcalls import GroupCallFactory
 
 @Client.on_message(filters.command(["join"], prefixes=f"{HNDLR}"))
 @authorized_users_only
@@ -42,3 +43,31 @@ async def opengc(client, message):
         await message.reply(
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
+
+@Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
+    command=("joinvc", plugin_category),
+    info={
+        "header": "join voice chat group.",
+        "description": "To join voice chat group.",
+        "usage": "{tr}joinvc",
+        "note": "make sure voice chat is active",
+    },
+)
+
+async def start(_, message: Message):
+    group_call = getchat
+    await group_call.start(message.chat.id)
+
+async def join_voice_chat(client, message):
+    if message.chat.id in getchat:
+        await message.reply('Already joined to Voice Chat')
+        return
+    chat_id = message.chat.id
+    try:
+        group_call = GroupCall(client, message)
+        await group_call.start(chat_id)
+    except RuntimeError:
+        await message.reply('error!')
+        return
+    getchat[chat_id] = group_call
+    await message.reply('Joined the Voice Chat ')
