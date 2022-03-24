@@ -53,7 +53,6 @@ async def joinvc(client, filters):
         "usage": "{tr}joinvc",
         "note": "make sure voice chat is active",
     },
-)
 
 async def start(_, message: Message):
     group_call = getchat
