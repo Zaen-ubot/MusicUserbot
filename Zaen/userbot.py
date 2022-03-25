@@ -28,19 +28,25 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
+
 @Client.on_message(filters.command(["ping"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
-    await m.delete()
-    start = time()
-    current_time = datetime.utcnow()
-    m_reply = await m.reply_text("🥵")
-    delta_ping = time() - start
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-    await m_reply.edit(
-        f"<b>🏓 PONG</b> `{delta_ping * 1000:.3f} ms` \n<b>⏳ AKTIF</b> - `{uptime}`"
-    )
-
+   start = time()
+   current_time = datetime.utcnow()
+   m_reply = await m.edit("Pinging...")
+   delta_ping = time() - start
+   await m_reply.edit("0% ▒▒▒▒▒▒▒▒▒▒")
+   await m_reply.edit("20% ██▒▒▒▒▒▒▒▒")
+   await m_reply.edit("40% ████▒▒▒▒▒▒")
+   await m_reply.edit("60% ██████▒▒▒▒")
+   await m_reply.edit("80% ████████▒▒")
+   await m_reply.edit("100% ██████████")
+   await asyncio.sleep(1)
+   end = datetime.now()
+   uptime_sec = (current_time - START_TIME).total_seconds()
+   uptime = await _human_time_duration(int(uptime_sec))
+   await m_reply.edit(f"🏓 Pong!!\nSpeed - {delta_ping * 1000:.3f} ms \nUptime - {uptime}")
+  )
 
 @Client.on_message(
     filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=f"{HNDLR}")
