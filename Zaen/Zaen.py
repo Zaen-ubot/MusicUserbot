@@ -1,5 +1,5 @@
 import os
-from pyrogram import GroupCall
+
 from random import randint
 from pyrogram import Client, filters
 from config import HNDLR, bot as USER
