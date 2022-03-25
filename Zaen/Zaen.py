@@ -1,3 +1,5 @@
+import os
+from pytgcalls import GroupCall
 from random import randint
 from pyrogram import Client, filters
 from config import HNDLR, bot as USER
@@ -43,30 +45,30 @@ async def opengc(client, message):
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
 
-@Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
-@authorized_users_only
-async def joinvc(client, filters):
-    info={
-        "header": "join voice chat group.",
-        "description": "To join voice chat group.",
-        "usage": "{tr}joinvc",
-        "note": "make sure voice chat is active",
-    },
-
-async def start(client, filters):
-    group_call = getchat
-    await group_call.start(message.chat.id)
-
+@app.on_message(filters.command('joinvc') & self_or_contact_filter)
 async def join_voice_chat(client, message):
-    if message.chat.id in getchat:
-        await message.reply('Already joined to Voice Chat')
+    input_filename = os.path.join(
+        client.workdir, DEFAULT_DOWNLOAD_DIR,
+        'input.raw',
+    )
+    if message.chat.id in VOICE_CHATS:
+        await message.reply('Sudah Bergabung ke Voice Chat 🛠')
         return
     chat_id = message.chat.id
     try:
-        group_call = GroupCall(client, message)
+        group_call = GroupCall(client, input_filename)
         await group_call.start(chat_id)
     except RuntimeError:
-        await message.reply('error!')
+        await message.reply('lel error!')
         return
-    getchat[chat_id] = group_call
-    await message.reply('Joined the Voice Chat ')
+    VOICE_CHATS[chat_id] = group_call
+    await message.reply('Bergabung Voice Chat ✅')
+
+
+@app.on_message(filters.command('leavevc') & self_or_contact_filter)
+async def leave_voice_chat(client, message):
+    chat_id = message.chat.id
+    group_call = VOICE_CHATS[chat_id]
+    await group_call.stop()
+    VOICE_CHATS.pop(chat_id, None)
+    await message.reply('Meninggalkan Voice Chat ✅')
