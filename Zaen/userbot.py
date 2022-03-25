@@ -41,7 +41,6 @@ async def ping(client, m: Message):
    await m_reply.edit("60% ██████▒▒▒▒")
    await m_reply.edit("80% ████████▒▒")
    await m_reply.edit("100% ██████████")
-   await asyncio.sleep(1)
    end = datetime.now()
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
