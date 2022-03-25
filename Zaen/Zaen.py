@@ -65,7 +65,7 @@ async def join_voice_chat(client, message):
     await message.reply('Bergabung Voice Chat ✅')
 
 
-@Client.on_message(filters.command(["leavevc"], prefixes=f"{HNDLR}")))
+@Client.on_message(filters.command(["leavevc"], prefixes=f"{HNDLR}"))
 async def leave_voice_chat(client, message):
     chat_id = message.chat.id
     group_call = VOICE_CHATS[chat_id]
