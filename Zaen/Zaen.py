@@ -45,7 +45,7 @@ async def opengc(client, message):
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
 
-@app.on_message(filters.command('joinvc') & self_or_contact_filter)
+@app.on_message(filters.command('joinvc"], prefixes=f"{HNDLR}"))
 async def join_voice_chat(client, message):
     input_filename = os.path.join(
         client.workdir, DEFAULT_DOWNLOAD_DIR,
@@ -65,7 +65,7 @@ async def join_voice_chat(client, message):
     await message.reply('Bergabung Voice Chat ✅')
 
 
-@app.on_message(filters.command('leavevc') & self_or_contact_filter)
+@app.on_message(filters.command('leavevc"], prefixes=f"{HNDLR}")))
 async def leave_voice_chat(client, message):
     chat_id = message.chat.id
     group_call = VOICE_CHATS[chat_id]
