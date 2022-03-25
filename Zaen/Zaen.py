@@ -50,7 +50,6 @@ async def join_voice_chat(client, message):
     input_filename = os.path.join(
         'input.raw',
     )
-    if message.chat.id in VOICE_CHATS:
         await message.reply('Sudah Bergabung ke Voice Chat 🛠')
         return
     chat_id = message.chat.id
