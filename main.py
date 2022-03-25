@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from config import call_py, bot
-from pytgcalls import GroupCall
+
 
 async def main():
     print("STARTING UBOT CLIENT")
@@ -10,9 +10,9 @@ async def main():
     await call_py.start()
     print(
         """
-    ------------------
-   | Music  Actived! |
-    ------------------
+    --------------------------
+   | Music-Userbot  Actived!  |
+    --------------------------
 """
     )
     await idle()
