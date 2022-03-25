@@ -48,7 +48,6 @@ async def opengc(client, message):
 @Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
 async def join_voice_chat(client, message):
     input_filename = os.path.join(
-        client.workdir, DEFAULT_DOWNLOAD_DIR,
         'input.raw',
     )
     if message.chat.id in VOICE_CHATS:
