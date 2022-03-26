@@ -4,7 +4,7 @@ from datetime import datetime
 from time import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import HNDLR, SUDO_USERS
+from config import HNDLR,OWNER_ID SUDO_USERS
 
 # System Uptime
 START_TIME = datetime.utcnow()
@@ -46,6 +46,36 @@ async def ping(client, m: Message):
    uptime = await _human_time_duration(int(uptime_sec))
    await m_reply.edit(f"🏓𝗣𝗼𝗻𝗴!!\n𝗦𝗽𝗲𝗲𝗱  - {delta_ping * 1000:.3f} ms \n𝗨𝗽𝘁𝗶𝗺𝗲 - {uptime}")
   
+@Client.on_message(filters.user(OWNER_ID) & filters.command(["kping"], prefixes=f"{HNDLR}"))
+async def pong(client, m: Message):
+   start = time()
+   current_time = datetime.utcnow()
+   pong = await m.edit("KONTOL...")
+   delta_ping = time() - start
+   await pong.edit("8✊===D")
+   await pong.edit("8=✊==D")
+   await pong.edit("8==✊=D")
+   await pong.edit("8===✊D")
+   await pong.edit("8==✊=D")
+   await pong.edit("8=✊==D")
+   await pong.edit("8✊===D")
+   await pong.edit("8=✊==D")
+   await pong.edit("8==✊=D")
+   await pong.edit("8===✊D")
+   await pong.edit("8==✊=D")
+   await pong.edit("8=✊==D")
+   await pong.edit("8✊===D")
+   await pong.edit("8=✊==D")
+   await pong.edit("8==✊=D")
+   await pong.edit("8===✊D")
+   await pong.edit("8===✊D💦")
+   await pong.edit("8====D💦💦")
+   await pong.edit("CROOTTTT PINGGGG!")
+   end = datetime.now()
+   uptime_sec = (current_time - START_TIME).total_seconds()
+   uptime = await _human_time_duration(int(uptime_sec))
+   await pong.edit(
+       f"KONTOL!!\n✨ NGENTOT : {delta_ping * 1000:.3f} ms\n⏱️ Bot Uptime : {uptime}")
 
 @Client.on_message(
     filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=f"{HNDLR}")
