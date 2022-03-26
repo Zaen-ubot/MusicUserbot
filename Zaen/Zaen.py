@@ -44,29 +44,3 @@ async def opengc(client, message):
         await message.reply(
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
-
-@Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
-async def join_voice_chat(client, message):
-    input_filename = os.path.join(
-        'input.raw',
-    )
-        await message.reply('Sudah Bergabung ke Voice Chat 🛠")
-        return
-    chat_id = message.chat.id
-    try:
-        group_call = GroupCall(client, input_filename)
-        await group_call.start(chat_id)
-    except RuntimeError:
-        await message.reply('lel error!')
-        return
-    VOICE_CHATS[chat_id] = group_call
-    await message.reply('Bergabung Voice Chat ✅')
-
-
-@Client.on_message(filters.command(["leavevc"], prefixes=f"{HNDLR}"))
-async def leave_voice_chat(client, message):
-    chat_id = message.chat.id
-    group_call = VOICE_CHATS[chat_id]
-    await group_call.stop()
-    VOICE_CHATS.pop(chat_id, None)
-    await message.reply('Meninggalkan Voice Chat ✅')
