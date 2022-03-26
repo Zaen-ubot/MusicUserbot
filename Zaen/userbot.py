@@ -4,7 +4,7 @@ from datetime import datetime
 from time import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import HNDLR,OWNER_ID SUDO_USERS
+from config import HNDLR, SUDO_USERS
 
 # System Uptime
 START_TIME = datetime.utcnow()
@@ -46,7 +46,7 @@ async def ping(client, m: Message):
    uptime = await _human_time_duration(int(uptime_sec))
    await m_reply.edit(f"🏓𝗣𝗼𝗻𝗴!!\n𝗦𝗽𝗲𝗲𝗱  - {delta_ping * 1000:.3f} ms \n𝗨𝗽𝘁𝗶𝗺𝗲 - {uptime}")
   
-@Client.on_message(filters.user(OWNER_ID) & filters.command(["kping"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["kping"], prefixes=f"{HNDLR}"))
 async def pong(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
