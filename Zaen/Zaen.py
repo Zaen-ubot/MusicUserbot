@@ -47,7 +47,7 @@ async def opengc(client, message):
 
 @Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
 async def join_(event):
-    geezav = await edit_or_reply(event, f"**Processing**")
+    botzen = await edit_or_reply(event, f"**Processing**")
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
         try:
@@ -85,6 +85,6 @@ async def leavevc(event):
             await call_py.leave_group_call(chat_id)
         except (NotInGroupCallError, NoActiveGroupCall):
             pass
-        await botman.edit(f"**{from_user} Berhasil Turun Dari VC Group!!**")
+        await botzen.edit(f"**{from_user} Berhasil Turun Dari VC Group!!**")
     else:
         await botman.delete(f"**Maaf {from_user} Tidak Berada Di VC Group**")
