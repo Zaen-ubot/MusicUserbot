@@ -70,7 +70,6 @@ async def join_voice_chat(client, message):
 @authorized_users_only
 async def leave_voice_chat(client, message):
     chat_id = message.chat.id
-    await group_call.stop()
     VOICE_CHATS.pop(chat_id, None)
     await message.reply('Meninggalkan Voice Chat ✅')
 
