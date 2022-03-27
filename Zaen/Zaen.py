@@ -45,46 +45,30 @@ async def opengc(client, message):
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
 
+
 @Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
-async def join_(event):
-    botzen = await edit_or_reply(event, f"**Processing**")
-    if len(event.text.split()) > 1:
-        chat = event.text.split()[1]
-        try:
-            chat = await event.client(GetFullUserRequest(chat))
-        except (NodeJSNotInstalled, TooOldNodeJSVersion):
-            return await edit_or_reply(event, "NodeJs is not installed or installed version is too old.")
-        except AlreadyJoinedError:
-            await call_py.leave_group_call(chat)
-            await asyncio.sleep(3)
-        except Exception as e:
-            return await botman.delete(f'Error during Joining the Call\n`{e}`')
-    else:
-        chat = event.chat_id
-        from_user = vcmention(event.sender)
-    if not call_py.is_connected:
-        await call_py.start()
-    await call_py.join_group_call(
-        chat,
-        AudioPiped(
-            'http://duramecho.com/Misc/SilentCd/Silence01s.mp3'
-        ),
-        stream_type=StreamType().pulse_stream,
+async def join_voice_chat(client, message):
+    input_filename = os.path.join(
+        client.workdir, DEFAULT_DOWNLOAD_DIR,
+        'input.raw',
     )
-    await botman.edit(f"**{from_user} Berhasil Naik Ke VC Group!!!**")
+    if message.chat.id in VOICE_CHATS:
+        await botzen.edit(f"{from_user}Sudah Bergabung ke Voice Chat 🛠')
+        return
+    chat_id = message.chat.id
+    try:
+        group_call = GroupCall(client, input_filename)
+        await group_call.start(chat_id)
+    except RuntimeError:
+        await message.reply('lel error!')
+        return
+    VOICE_CHATS[chat_id] = group_call
+    await message.reply('Bergabung Voice Chat ✅')
 
-
-@Client.on_message(filters.command(["leavevc"], prefixes=f"{HNDLR}"))
-async def leavevc(event):
-    """ leave video chat """
-    botman = await edit_or_reply(event, "Processing")
-    chat_id = event.chat_id
-    from_user = vcmention(event.sender)
-    if from_user:
-        try:
-            await call_py.leave_group_call(chat_id)
-        except (NotInGroupCallError, NoActiveGroupCall):
-            pass
-        await botzen.edit(f"**{from_user} Berhasil Turun Dari VC Group!!**")
-    else:
-        await botman.delete(f"**Maaf {from_user} Tidak Berada Di VC Group**")
+@Client.on_message(filters.command(["leavenvc"], prefixes=f"{HNDLR}"))
+async def leave_voice_chat(client, message):
+    chat_id = message.chat.id
+    group_call = VOICE_CHATS[chat_id]
+    await group_call.stop()
+    VOICE_CHATS.pop(chat_id, None)
+    await botzen.edit(f"{from_user}'Meninggalkan Voice Chat ✅')
