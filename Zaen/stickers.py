@@ -13,7 +13,8 @@ from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 from pyrogram.errors import YouBlockedUser, StickersetInvalid
 
-from config import, HNDLR,  
+from config import HNDLR
+
 
 
 @Client.on_message(filters.command(["kang"], prefixes=f"{HNDLR}"))
