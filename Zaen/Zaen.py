@@ -6,7 +6,7 @@ from config import HNDLR, bot as USER
 from Zaen.helpers.decorators import authorized_users_only
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.raw.functions.phone import CreateGroupCall
-
+from pytgcalls import GroupCall
 
 @Client.on_message(filters.command(["join"], prefixes=f"{HNDLR}"))
 @authorized_users_only
@@ -45,31 +45,20 @@ async def opengc(client, message):
             "**Error:** Add userbot as admin of your group/channel with permission **Can manage voice chat**"
         )
 
-@Client.on_message(filters.command(["joinnvc"], prefixes=f"{HNDLR}"))
-@authorized_users_only
-async def join_voice_chat(client, message):
-    input_filename = os.path.join(
-        client.workdir, DEFAULT_DOWNLOAD_DIR,
-        'input.raw',
-    )
-    if message.chat.id in VOICE_CHATS:
-        await message.reply('Sudah Bergabung ke Voice Chat 🛠')
-        return
-    chat_id = message.chat.id
-    try:
-        group_call = GroupCall(client, input_filename)
-        await group_call.start(chat_id)
-    except RuntimeError:
-        await message.reply('lel error!')
-        return
-    VOICE_CHATS[chat_id] = group_call
-    await message.reply('Bergabung Voice Chat ✅')
 
-
-@Client.on_message(filters.command(["leavevc"], prefixes=f"{HNDLR}"))
-@authorized_users_only
-async def leave_voice_chat(client, message):
-    chat_id = message.chat.id
-    VOICE_CHATS.pop(chat_id, None)
-    await message.reply('Meninggalkan Voice Chat ✅')
-
+@Client.on_message(main_filter
+                   & filters.command("join", prefixes="!"))
+async def join_voice_chat(client, m: Message):
+    command = m.command
+    len_command = len(command)
+    if 2 <= len_command <= 4:
+        channel = await get_id(command[1])
+        join_as = await get_id(command[2]) if len_command >= 3 else None
+        invite_hash = command[3] if len_command == 4 else None
+        group_call = mp.group_call
+        group_call.client = client
+        if group_call.is_connected:
+            text = f"{emoji.ROBOT} already joined a voice chat"
+        else:
+            await group_call.start(channel, join_as=join_as,
+                                   invite_hash=invite_hash)
