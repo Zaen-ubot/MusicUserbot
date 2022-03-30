@@ -1,20 +1,10 @@
-FROM python:latest
+FROM nikolaik/python-nodejs:python3.10-nodejs17
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ffmpeg \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+COPY . /app
+WORKDIR /app
+RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
-ENV VIRTUAL_ENV "/venv"
-RUN python -m venv $VIRTUAL_ENV
-ENV PATH "$VIRTUAL_ENV/bin:$PATH"
-
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y ffmpeg opus-tools bpm-tools
-RUN python -m pip install --upgrade pip
-RUN python -m pip install wheel
-RUN python -m pip install pytgcalls[pyrogram] TgCrypto ffmpeg-python psutil
-
-RUN wget -q https://github.com/callsmusic/tgvc-userbot/archive/dev.tar.gz && \
-    tar xf dev.tar.gz && rm dev.tar.gz
-
-WORKDIR /tgvc-userbot-dev
 CMD python3 main.py
-
-# docker build -t tgcalls .
-# docker run -it --rm --env-file ./envfile --name tgvc-userbot tgcalls
