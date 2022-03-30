@@ -46,8 +46,9 @@ async def opengc(client, message):
         )
 
 
-@Client.on_message(main_filter
-                   & filters.command("join", prefixes="!"))
+
+@Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
+@authorized_users_only
 async def join_voice_chat(client, m: Message):
     command = m.command
     len_command = len(command)
