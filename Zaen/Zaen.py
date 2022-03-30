@@ -49,7 +49,7 @@ async def opengc(client, message):
 
 @Client.on_message(filters.command(["joinvc"], prefixes=f"{HNDLR}"))
 @authorized_users_only
-async def join_chat(client, m: Message):
+async def join(client, m: Message):
     command = m.command
     len_command = len(command)
     if 2 <= len_command <= 4:
