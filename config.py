@@ -12,7 +12,7 @@ if os.path.exists(".env"):
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 SESSION = os.getenv("SESSION")
-HNDLR = os.getenv("HNDLR", "!")
+HNDLR = os.getenv("HNDLR", "+")
 SUDO_USERS = list(map(int, os.getenv("SUDO_USERS").split()))
 
 
@@ -21,5 +21,5 @@ contact_filter = filters.create(
     or message.outgoing
 )
 
-bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="Zaen"))
+bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="Music-Userbot"))
 call_py = PyTgCalls(bot)
