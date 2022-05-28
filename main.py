@@ -11,7 +11,7 @@ async def main():
     print(
         """
     --------------------------
-   |    Music-Userbot Actived  |
+   |   Music-Userbot Actived  |
     --------------------------
 """
     )
