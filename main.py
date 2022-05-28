@@ -1,24 +1,22 @@
 import asyncio
+
 from pytgcalls import idle
-from config import call_py, bot
+
+from config import call_py
+from Music-Userbot.quote import arq
 
 
 async def main():
-    print("STARTING UBOT CLIENT")
-    await bot.start()
-    print("STARTING PYTGCALLS CLIENT")
     await call_py.start()
     print(
         """
     --------------------------
-   | Music-Userbot  Actived!  |
+   |    Music-Userbot Actived  |
     --------------------------
 """
     )
     await idle()
-    await pidle()
-    print("STOPPING USERBOT")
-    await bot.stop()
+    await arq.close()
 
 
 loop = asyncio.get_event_loop()
