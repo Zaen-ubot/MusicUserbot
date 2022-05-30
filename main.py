@@ -3,8 +3,6 @@ import asyncio
 from pytgcalls import idle
 
 from config import call_py
-from Music-Userbot import arq
-
 
 async def main():
     await call_py.start()
