@@ -1,6 +1,6 @@
 TgCrypto
-pyrogram==1.4.16
-py-tgcalls==0.8.6
+pyrogram==1.4.16 
+py-tgcalls==0.8.5
 requests
 aiohttp
 aiofiles
