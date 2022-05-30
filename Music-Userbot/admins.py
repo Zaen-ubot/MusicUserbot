@@ -1,13 +1,12 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
 from config import HNDLR, call_py
 from Music-Userbot.helpers.decorators import authorized_users_only
 from Music-Userbot.helpers.handlers import skip_current_song, skip_item
 from Music-Userbot.helpers.queues import QUEUE, clear_queue
 
 
-@Client.on_message(filters.command(["vskip"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["skip"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def skip(client, m: Message):
     await m.delete()
@@ -20,7 +19,7 @@ async def skip(client, m: Message):
             await m.reply("Antrian Kosong, Meninggalkan Obrolan Suara**")
         else:
             await m.reply(
-                f"**⏭ Melewati pemutaran** \n**🎧 Sekarang memutar** - [{op[0]}]({op[1]}) | `{op[2]}`",
+                f"**⏭ Melewati pemutaran** \n**🎵 Sekarang memutar** - [{op[0]}]({op[1]}) | `{op[2]}`",
                 disable_web_page_preview=True,
             )
     else:
@@ -41,7 +40,7 @@ async def skip(client, m: Message):
             await m.reply(OP)
 
 
-@Client.on_message(filters.command(["vend", "vstop"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["end", "stop"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def stop(client, m: Message):
     await m.delete()
@@ -57,7 +56,7 @@ async def stop(client, m: Message):
         await m.reply("**❌ Tidak ada apapun yang sedang diputar!**")
 
 
-@Client.on_message(filters.command(["vpause"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["pause"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def pause(client, m: Message):
     await m.delete()
@@ -74,7 +73,7 @@ async def pause(client, m: Message):
         await m.reply("** ❌ Tidak ada apapun yang sedang diputar!**")
 
 
-@Client.on_message(filters.command(["vresume"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["resume"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def resume(client, m: Message):
     await m.delete()
