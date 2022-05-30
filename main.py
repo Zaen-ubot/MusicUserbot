@@ -1,8 +1,10 @@
 import asyncio
 
 from pytgcalls import idle
-from Music-Userbot import arq
+
 from config import call_py
+from Music-Userbot.quote import arq
+
 
 async def main():
     await call_py.start()
