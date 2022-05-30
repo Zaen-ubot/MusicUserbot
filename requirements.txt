@@ -1,9 +1,10 @@
 TgCrypto
-git+https://github.com/pyrogram/pyrogram@master
-py-tgcalls
+pyrogram
+py-tgcalls==0.8.6
 requests
 aiohttp
 aiofiles
+pillow
 asyncio
 wget
 python-arq
