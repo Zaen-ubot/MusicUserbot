@@ -3,7 +3,7 @@ import asyncio
 from pytgcalls import idle
 
 from config import call_py
-from Music-Userbot.quote import arq
+from Music-Userbot.quote import ARQ
 
 
 async def main():
