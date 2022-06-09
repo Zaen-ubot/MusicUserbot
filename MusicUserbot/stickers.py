@@ -15,7 +15,7 @@ from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 from pyrogram.errors import YouBlockedUser, StickersetInvalid
 
-from config import HNDLR, bot as USER DOWN_PATH
+from config import HNDLR, DOWN_PATH, bot as USER 
 
 @Client.on_message(filters.command(["kang"], prefixes=f"{HNDLR}"))
 async def kang_(client, message: Message):
