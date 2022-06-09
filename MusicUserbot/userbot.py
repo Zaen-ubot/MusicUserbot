@@ -52,7 +52,6 @@ async def ping(client, m: Message):
    uptime = await get_readable_time((time.time() - StartTime))
    m_reply = await m.edit("Kontol...")
    delta_ping = time() - start
-    await m_reply.edit("Kontol")
     await m_reply.edit("Kontol⚡")
     await m_reply.edit("konto⚡l")
     await m_reply.edit("kon⚡tol")
