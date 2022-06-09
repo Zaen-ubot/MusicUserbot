@@ -3,7 +3,6 @@
 
 
 from config import HNDLR, SUDO_USERS
-from MusicUserbot import CMD_HELP
 import random
 from MusicUserbot import owner
 from pyrogram.tl.types import InputMessagesFilterVideo
