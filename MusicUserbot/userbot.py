@@ -49,7 +49,7 @@ async def ping(client, m: Message):
 @Client.on_message(filters.command(["tping"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
    start = time()
-   current_time = datetime.utcnow()
+   uptime = await get_readable_time((time.time() - StartTime))
    m_reply = await m.edit("Kontol...")
    delta_ping = time() - start
     await m_reply.edit("Kontol")
