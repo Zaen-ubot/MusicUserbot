@@ -1,8 +1,8 @@
 # Porter from Userge (https://github.com/UsergeTeam/Userge/
 # Ported by KennedyProject (https://github.com/KennedyProject)
 # For Vcmusic-Userbot 2021
-#Rocode by Zaen (https://github.com/Zaen-Ubot)
-#For MusicUserbot 2022
+# Rocode by Zaen (https://github.com/Zaen-Ubot)
+# For MusicUserbot 2022
 
 import io
 import os
