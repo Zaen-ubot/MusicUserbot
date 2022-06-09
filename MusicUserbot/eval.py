@@ -6,7 +6,7 @@ import subprocess
 from io import StringIO
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import bot, HNDLR, 
+from config import HNDLR, bot as USER
 
 async def aexec(code, client, m: Message):
     exec(
