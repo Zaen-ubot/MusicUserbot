@@ -15,7 +15,7 @@ from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 from pyrogram.errors import YouBlockedUser, StickersetInvalid
 
-from config import HNDLR, DOWN_PATH, bot as USER 
+from config import HNDLR,  bot as USER 
 
 @Client.on_message(filters.command(["kang"], prefixes=f"{HNDLR}"))
 async def kang_(client, message: Message):
@@ -46,7 +46,7 @@ async def kang_(client, message: Message):
             await message.edit("`Unsupported File!`")
             return
         await message.edit(f"`{random.choice(KANGING_STR)}`")
-        photo = await client.download_media(message=replied, file_name=DOWN_PATH)
+        photo = await client.download_media(message=replied, 
     else:
         await message.err("`I can't kang that...`")
         return
