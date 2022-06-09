@@ -4,7 +4,6 @@
 
 from config import HNDLR, SUDO_USERS
 import random
-from MusicUserbot import owner
 from pyrogram.tl.types import InputMessagesFilterVideo
 from pyrogram.tl.types import InputMessagesFilterVoice
 
