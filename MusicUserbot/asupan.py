@@ -2,7 +2,7 @@
 # ⚠️ Do not remove credits
 
 
-from MusicUserbot import CMD_HANDLER as cmd
+from config import HNDLR, SUDO_USERS
 from MusicUserbot import CMD_HELP
 import random
 from MusicUserbot import owner
