@@ -46,8 +46,8 @@ async def ping(client, m: Message):
    uptime = await _human_time_duration(int(uptime_sec))
    await m_reply.edit(f"🏓𝗣𝗼𝗻𝗴!!\n𝗦𝗽𝗲𝗲𝗱  - {delta_ping * 1000:.3f} ms \n𝗨𝗽𝘁𝗶𝗺𝗲 - {uptime}")
 
-@poci_cmd(pattern="tping$")
-async def _(pong):
+@Client.on_message(filters.command(["tping"], prefixes=f"{HNDLR}"))
+async def ping(client, m: Message):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
