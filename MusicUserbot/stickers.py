@@ -47,7 +47,6 @@ async def kang_(client, message: Message):
             return
         await message.edit(f"`{random.choice(KANGING_STR)}`")
         photo = await client.download_media(message=replied, 
-    else:
         await message.err("`I can't kang that...`")
         return
     if photo:
