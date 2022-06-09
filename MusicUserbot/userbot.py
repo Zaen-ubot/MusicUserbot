@@ -48,9 +48,10 @@ async def ping(client, m: Message):
 
 @Client.on_message(filters.command(["tping"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
-    """ For .ping command, ping the userbot from any chat.  """
-    uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+   start = time()
+   current_time = datetime.utcnow()
+   m_reply = await m.edit("Kontol...")
+   delta_ping = time() - start
     await m_reply.edit("Kontol")
     await m_reply.edit("Kontol⚡")
     await m_reply.edit("konto⚡l")
