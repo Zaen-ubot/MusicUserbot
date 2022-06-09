@@ -2,7 +2,7 @@
 # Ported by KennedyProject (https://github.com/KennedyProject)
 # For Vcmusic-Userbot 2021
 #Rocode by Zaen (https://github.com/Zaen-Ubot)
-#For MusicUsrbot 2022
+#For MusicUserbot 2022
 
 import io
 import os
@@ -15,9 +15,9 @@ from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 from pyrogram.errors import YouBlockedUser, StickersetInvalid
 
-from config import bot, HNDLR, 
+from config import HNDLR, bot as USER
 
-@Client.on_message(filters.user(OWNER_ID) & filters.command(['kang'], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["kang"], prefixes=f"{HNDLR}"))
 async def kang_(client, message: Message):
     """ kang a sticker """
     user = await client.get_me()
