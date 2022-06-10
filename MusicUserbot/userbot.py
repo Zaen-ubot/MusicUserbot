@@ -27,7 +27,7 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else ""))
     return ", ".join(parts)
 
-@Client.on_message(filters.command(["tping"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["ping"], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
