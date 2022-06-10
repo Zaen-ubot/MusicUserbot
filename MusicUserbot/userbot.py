@@ -45,7 +45,7 @@ async def ping(client, m: Message):
    await m_reply.edit(f"**┞◈𝗣𝗼𝗻𝗴!!🏓**\n**┞◈Pinger**  - {delta_ping * 1000:.3f} ms \n**┞◈Uptime** - {uptime}")
 
 
-@Client.on_message(filters.command(["afa"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["ok"], prefixes=f"{HNDLR}"))
 async def pong(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
