@@ -28,12 +28,12 @@
 ## 🛠 Commands:
 | Command | Description |
 | ------ | ------ |
-| +play | play music from youtube |
-| +vplay | play video from youtube |
-| +vplay | play video live streaming video |
-| +pause | pause the streaming (admin only) |
-| +resume | resume the streaming (admin only) |
-| +skip | switch to next stream (admin only) |
-| +playlist | show you all the current | stream list |
-| +song | download music from youtube |
-| +stop | end the streaming (admin only) |
+| `+play` | memutar musik dari youtube|
+| `+vplay` | memutar video dari youtube |
+| `+vplay` | putar video streaming langsung video |
+| `+pause` | jeda streaming (khusus admin) |
+| `+resume` | melanjutkan streaming (khusus admin)|
+| `+skip` | beralih ke aliran berikutnya (khusus admin) |
+| `+playlist` | menunjukkan kepada Anda semua daftar aliran saat ini|
+| `+song` | unduh musik dari youtube |
+| `+stop` |akhiri streaming (khusus admin)  |
