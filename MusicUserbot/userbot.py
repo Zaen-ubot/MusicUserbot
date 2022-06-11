@@ -74,7 +74,7 @@ async def pong(client, m: Message):
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
    await pong.edit(
-       f"**┞❏KONTOL!!**\n**┞❏NGENTOT** : {delta_ping * 1000:.3f} ms\n**┞❏Bot Uptime** : {uptime}")
+       f"**❏MusicUserbot**\n**❏NGENTOT** : {delta_ping * 1000:.3f} ms\n**❏Bot Uptime** : {uptime}")
 
 @Client.on_message(
     filters.user(SUDO_USERS) & filters.command(["restart"], prefixes=f"{HNDLR}")
