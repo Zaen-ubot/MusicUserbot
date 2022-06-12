@@ -3,7 +3,6 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message
 
-from bot import Bot
 from config import HNDLR, bot as USER
 
 
