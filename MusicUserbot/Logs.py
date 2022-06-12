@@ -4,10 +4,11 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from bot import Bot
-from config import ADMINS
+from config import HNDLR, bot as USER
 
 
-@Bot.on_message(filters.command("logs") & filters.user(ADMINS))
+
+@Client.on_message(filters.command(["logs"], prefixes=f"{HNDLR}"))
 async def get_bot_logs(client: Bot, m: Message):
     bot_log_path = "logs.txt"
     if os.path.exists(bot_log_path):
